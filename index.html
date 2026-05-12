@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yuna Poster — Content Scheduling for TikTok</title>
-  <meta name="description" content="Yuna Poster is a content scheduling tool for posting lifestyle videos and images to TikTok. Schedule, preview, and publish automatically.">
+  <title>YunaMoriFit — Content Scheduling for TikTok</title>
+  <meta name="description" content="YunaMoriFit is a content scheduling tool for posting lifestyle videos and images to TikTok. Schedule, preview, and publish automatically.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -22,11 +22,8 @@
       --font-body: 'DM Sans', -apple-system, sans-serif;
       --font-mono: 'Space Mono', monospace;
     }
-
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
     html { scroll-behavior: smooth; }
-
     body {
       font-family: var(--font-body);
       background: var(--bg);
@@ -34,7 +31,6 @@
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
     }
-
     /* ─── NAV ─── */
     nav {
       display: flex;
@@ -72,7 +68,6 @@
       transition: color .2s;
     }
     .nav-links a:hover { color: var(--text); }
-
     /* ─── HERO ─── */
     .hero {
       max-width: 1080px;
@@ -124,7 +119,6 @@
     }
     .hero-cta:hover { background: var(--accent-dark); transform: translateY(-1px); }
     .hero-cta svg { width: 16px; height: 16px; }
-
     /* ─── APP MOCKUP ─── */
     .mockup-section {
       max-width: 960px;
@@ -162,7 +156,6 @@
       font-family: var(--font-mono);
       letter-spacing: .5px;
     }
-
     .mockup-body {
       display: grid;
       grid-template-columns: 220px 1fr;
@@ -190,7 +183,6 @@
     }
     .sidebar-item svg { width: 16px; height: 16px; opacity: .7; }
     .sidebar-item.active svg { opacity: 1; }
-
     .mockup-main { padding: 24px; }
     .mockup-header {
       display: flex;
@@ -212,7 +204,6 @@
       cursor: default;
     }
     .mock-btn-primary { background: var(--accent); color: #fff; }
-
     /* queue table */
     .queue-table { width: 100%; border-collapse: collapse; }
     .queue-table th {
@@ -251,7 +242,6 @@
     .status-queued { background: #fff3cd; color: #856404; }
     .status-posted { background: #d4edda; color: #155724; }
     .status-scheduled { background: #d1ecf1; color: #0c5460; }
-
     /* ─── FEATURES ─── */
     .features {
       max-width: 1080px;
@@ -310,7 +300,6 @@
       color: var(--text-muted);
       line-height: 1.65;
     }
-
     /* ─── HOW IT WORKS ─── */
     .how-it-works {
       max-width: 1080px;
@@ -354,7 +343,6 @@
       color: var(--text-muted);
       line-height: 1.65;
     }
-
     /* ─── TECH ─── */
     .tech {
       max-width: 1080px;
@@ -391,7 +379,6 @@
       color: var(--accent);
       font-weight: 600;
     }
-
     /* ─── FOOTER ─── */
     footer {
       max-width: 1080px;
@@ -415,7 +402,6 @@
     }
     footer a:hover { color: var(--text); }
     .footer-links { display: flex; gap: 24px; }
-
     /* ─── RESPONSIVE ─── */
     @media (max-width: 768px) {
       .mockup-body { grid-template-columns: 1fr; }
@@ -432,11 +418,11 @@
 
   <!-- NAV -->
   <nav>
-    <a href="/app" class="nav-brand">
+    <a href="/" class="nav-brand">
       <div class="nav-logo">
         <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
       </div>
-      <span class="nav-name">Yuna Poster</span>
+      <span class="nav-name">YunaMoriFit</span>
     </a>
     <div class="nav-links">
       <a href="#features">Features</a>
@@ -449,7 +435,7 @@
   <section class="hero">
     <div class="hero-badge">● Now with TikTok integration</div>
     <h1>Schedule &amp; publish your content to TikTok</h1>
-    <p>Yuna Poster is a content scheduling tool that lets you queue lifestyle videos and images, set your posting times, and publish to TikTok automatically.</p>
+    <p>YunaMoriFit is a content scheduling tool that lets you queue lifestyle videos and images, set your posting times, and publish to TikTok automatically.</p>
     <a href="#how-it-works" class="hero-cta">
       See how it works
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
@@ -463,7 +449,7 @@
         <div class="mockup-dot r"></div>
         <div class="mockup-dot y"></div>
         <div class="mockup-dot g"></div>
-        <span>Yuna Poster — Content Queue</span>
+        <span>YunaMoriFit — Content Queue</span>
       </div>
       <div class="mockup-body">
         <div class="mockup-sidebar">
@@ -557,7 +543,7 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
         </div>
         <h3>Scheduled Publishing</h3>
-        <p>Set the exact date and time for each post. Yuna Poster handles the rest — your content goes live on schedule, hands-free.</p>
+        <p>Set the exact date and time for each post. YunaMoriFit handles the rest — your content goes live on schedule, hands-free.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">
@@ -603,7 +589,7 @@
       <div class="step">
         <div class="step-num">02</div>
         <h3>Schedule</h3>
-        <p>Yuna Poster checks the queue on a recurring schedule. When it's time for a post, the system pulls the next queued item and prepares it for publishing.</p>
+        <p>YunaMoriFit checks the queue on a recurring schedule. When it's time for a post, the system pulls the next queued item and prepares it for publishing.</p>
       </div>
       <div class="step">
         <div class="step-num">03</div>
@@ -631,14 +617,14 @@
       </div>
       <div class="tech-block">
         <h4>Privacy &amp; Data</h4>
-        <p>Yuna Poster processes content locally on self-hosted infrastructure. No user data is stored on external servers. All API credentials are managed securely within the n8n instance.</p>
+        <p>YunaMoriFit processes content locally on self-hosted infrastructure. No user data is stored on external servers. All API credentials are managed securely within the n8n instance.</p>
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer>
-    <p>&copy; 2026 Yuna Poster. A product by <a href="https://yunamorifit.com">yunamorifit.com</a></p>
+    <p>&copy; 2026 YunaMoriFit. A product by <a href="https://yunamorifit.com">yunamorifit.com</a></p>
     <div class="footer-links">
       <a href="https://yunamorifit.com/terms">Terms of Service</a>
       <a href="https://yunamorifit.com/privacy">Privacy Policy</a>
