@@ -20,6 +20,7 @@
       --bg: #0b0a0d;
       --surface: #141317;
       --text: #e4e0dc;
+      --text-mid: #c0bbb6;
       --text-soft: #9a9590;
       --accent: #c4816e;
       --accent-hover: #d4917e;
@@ -38,9 +39,9 @@
     }
 
     .page {
-      max-width: 440px;
+      max-width: 540px;
       margin: 0 auto;
-      padding: 0 20px;
+      padding: 0 24px;
     }
 
     /* Hero */
@@ -53,7 +54,6 @@
 
     .hero-video {
       width: 100%;
-      max-width: 400px;
       aspect-ratio: 9 / 16;
       object-fit: cover;
       border-radius: 8px;
@@ -63,29 +63,28 @@
     .hero-name {
       font-family: 'Cormorant Garamond', Georgia, serif;
       font-weight: 400;
-      font-size: 2rem;
+      font-size: 2.2rem;
       letter-spacing: 0.02em;
       margin-top: 28px;
       text-align: center;
     }
 
     .hero-tagline {
-      font-size: 0.9rem;
+      font-size: 0.92rem;
       font-weight: 300;
-      color: var(--text-soft);
+      color: var(--text-mid);
       margin-top: 8px;
       text-align: center;
       letter-spacing: 0.01em;
-      max-width: 320px;
+      max-width: 380px;
     }
 
     /* CTA */
     .cta-primary {
       display: block;
       width: 100%;
-      max-width: 400px;
       margin: 32px auto 0;
-      padding: 16px 24px;
+      padding: 18px 24px;
       background: var(--accent);
       color: #fff;
       font-family: 'Inter', sans-serif;
@@ -104,10 +103,10 @@
     }
 
     .cta-sub {
-      font-size: 0.78rem;
-      color: var(--text-soft);
+      font-size: 0.8rem;
+      color: var(--text-mid);
       text-align: center;
-      margin-top: 10px;
+      margin-top: 12px;
       font-weight: 300;
     }
 
@@ -169,7 +168,7 @@
     .inside-list li {
       font-size: 0.85rem;
       font-weight: 300;
-      color: var(--text-soft);
+      color: var(--text-mid);
       padding-left: 16px;
       position: relative;
     }
@@ -192,7 +191,7 @@
       font-weight: 400;
     }
 
-    /* Bottom CTA */
+    /* Bottom CTA — solid fill, same weight as top */
     .cta-bottom {
       margin-top: 40px;
     }
@@ -200,25 +199,23 @@
     .cta-secondary {
       display: block;
       width: 100%;
-      max-width: 400px;
       margin: 0 auto;
-      padding: 14px 24px;
-      background: transparent;
-      color: var(--accent);
+      padding: 18px 24px;
+      background: var(--accent);
+      color: #fff;
       font-family: 'Inter', sans-serif;
-      font-size: 0.88rem;
-      font-weight: 400;
+      font-size: 0.92rem;
+      font-weight: 500;
       letter-spacing: 0.02em;
       text-align: center;
       text-decoration: none;
-      border: 1px solid var(--accent);
       border-radius: var(--radius);
-      transition: background 0.2s ease, color 0.2s ease;
+      transition: background 0.2s ease, transform 0.15s ease;
     }
 
     .cta-secondary:hover {
-      background: var(--accent);
-      color: #fff;
+      background: var(--accent-hover);
+      transform: translateY(-1px);
     }
 
     /* Footer */
@@ -259,7 +256,7 @@
     @media (max-width: 380px) {
       .hero { padding-top: 32px; }
       .hero-name { font-size: 1.75rem; }
-      .cta-primary { padding: 14px 20px; }
+      .cta-primary, .cta-secondary { padding: 16px 20px; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -276,14 +273,14 @@
         <source src="hero.mp4" type="video/mp4">
       </video>
       <h1 class="hero-name">Yuna Mori</h1>
-      <p class="hero-tagline">Slow mornings in Silver Lake. The archive that doesn't belong on Instagram.</p>
+      <p class="hero-tagline">Slow mornings in Silver Lake. Free previews on Fanvue, with the after-hours archive for members.</p>
     </section>
 
     <a class="cta-primary" href="https://www.fanvue.com/yunamorifit">Follow Free on Fanvue</a>
-    <p class="cta-sub">Free previews are open. Members get the exclusive archive.</p>
+    <p class="cta-sub">Free to follow. Upgrade only for locked posts.</p>
 
     <section class="preview-section">
-      <p class="preview-label">a taste before the blur wall</p>
+      <p class="preview-label">Preview the archive</p>
       <div class="preview-grid">
         <img src="preview-1.jpg" alt="Preview" loading="lazy">
         <img src="preview-2.jpg" alt="Preview" loading="lazy">
@@ -295,16 +292,16 @@
     <section class="inside-section">
       <h2 class="inside-heading">What's inside</h2>
       <ul class="inside-list">
-        <li>Free follower posts — lifestyle, pilates, slow mornings</li>
-        <li>Members-only exclusive sets you won't see anywhere else</li>
+        <li>Free weekly lifestyle and pilates updates</li>
+        <li>Members-only exclusive sets you won't see on IG</li>
         <li>New drops every week</li>
-        <li>DMs are open</li>
+        <li>DMs are open — I actually reply</li>
       </ul>
       <p class="inside-price">$3.99/month · cancel anytime</p>
     </section>
 
     <div class="cta-bottom">
-      <a class="cta-secondary" href="https://www.fanvue.com/yunamorifit">See the full archive →</a>
+      <a class="cta-secondary" href="https://www.fanvue.com/yunamorifit">Enter the full archive →</a>
     </div>
 
     <footer class="footer">
