@@ -1,301 +1,324 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yuna Mori</title>
-    <meta name="description" content="Yuna Mori — Osaka → Silver Lake. Pilates, slow mornings, 18+ archive.">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" href="apple-touch-icon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
-    <style>
-        *, *::before, *::after {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yuna Mori</title>
+  <meta name="description" content="Yuna Mori — Osaka → Silver Lake. Pilates, slow mornings, 18+ archive.">
+  <meta property="og:title" content="Yuna Mori">
+  <meta property="og:description" content="Slow mornings in Silver Lake. The archive you won't find on Instagram.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yunamorifit.com">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
-        :root {
-            --bg: #0a0a0f;
-            --card-bg: rgba(255, 255, 255, 0.03);
-            --card-border: rgba(255, 255, 255, 0.06);
-            --text-primary: #f0ece6;
-            --text-secondary: rgba(240, 236, 230, 0.5);
-            --accent: #c8a87e;
-            --accent-glow: rgba(200, 168, 126, 0.15);
-            --link-bg: rgba(200, 168, 126, 0.08);
-            --link-border: rgba(200, 168, 126, 0.2);
-            --link-hover-bg: rgba(200, 168, 126, 0.15);
-            --link-hover-border: rgba(200, 168, 126, 0.4);
-        }
+    :root {
+      --bg: #0b0a0d;
+      --surface: #141317;
+      --text: #e4e0dc;
+      --text-soft: #9a9590;
+      --accent: #c4816e;
+      --accent-hover: #d4917e;
+      --radius: 6px;
+    }
 
-        body {
-            font-family: 'Outfit', sans-serif;
-            background: var(--bg);
-            color: var(--text-primary);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            padding: 60px 20px 40px;
-            overflow-x: hidden;
-        }
+    html { font-size: 16px; }
 
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: 
-                radial-gradient(ellipse 600px 400px at 50% 0%, rgba(200, 168, 126, 0.06), transparent),
-                radial-gradient(ellipse 400px 600px at 20% 50%, rgba(100, 80, 60, 0.04), transparent),
-                radial-gradient(ellipse 400px 600px at 80% 80%, rgba(150, 120, 90, 0.03), transparent);
-            pointer-events: none;
-            z-index: 0;
-        }
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+    }
 
-        .container {
-            width: 100%;
-            max-width: 420px;
-            position: relative;
-            z-index: 1;
-            animation: fadeUp 0.8s ease-out;
-        }
+    .page {
+      max-width: 440px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-        @keyframes fadeUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+    /* ── Hero ── */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 48px;
+    }
 
-        /* Profile Section */
-        .profile {
-            text-align: center;
-            margin-bottom: 36px;
-        }
+    .hero-img {
+      width: 100%;
+      max-width: 400px;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      border-radius: 8px;
+    }
 
-        .profile-image-wrapper {
-            width: 120px;
-            height: 120px;
-            margin: 0 auto 24px;
-            position: relative;
-        }
+    .hero-name {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 400;
+      font-size: 2rem;
+      letter-spacing: 0.02em;
+      margin-top: 28px;
+      text-align: center;
+    }
 
-        .profile-image-wrapper::before {
-            content: '';
-            position: absolute;
-            inset: -3px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--accent), rgba(200, 168, 126, 0.2), var(--accent));
-            opacity: 0.6;
-        }
+    .hero-tagline {
+      font-size: 0.9rem;
+      font-weight: 300;
+      color: var(--text-soft);
+      margin-top: 8px;
+      text-align: center;
+      letter-spacing: 0.01em;
+    }
 
-        .profile-image {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            object-fit: cover;
-            position: relative;
-            z-index: 1;
-            border: 3px solid var(--bg);
-        }
+    /* ── CTA ── */
+    .cta-primary {
+      display: block;
+      width: 100%;
+      max-width: 400px;
+      margin: 32px auto 0;
+      padding: 16px 24px;
+      background: var(--accent);
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      text-align: center;
+      text-decoration: none;
+      border-radius: var(--radius);
+      transition: background 0.2s ease, transform 0.15s ease;
+    }
 
-        .profile-name {
-            font-family: 'Cormorant Garamond', serif;
-            font-weight: 300;
-            font-size: 2rem;
-            letter-spacing: 0.04em;
-            margin-bottom: 8px;
-            color: var(--text-primary);
-        }
+    .cta-primary:hover {
+      background: var(--accent-hover);
+      transform: translateY(-1px);
+    }
 
-        .profile-bio {
-            font-weight: 300;
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-            letter-spacing: 0.02em;
-            line-height: 1.6;
-        }
+    .cta-sub {
+      font-size: 0.78rem;
+      color: var(--text-soft);
+      text-align: center;
+      margin-top: 10px;
+      font-weight: 300;
+    }
 
-        /* Social Icons */
-        .socials {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 20px;
-            margin-bottom: 36px;
-        }
+    /* ── Preview Grid ── */
+    .preview-section {
+      margin-top: 48px;
+    }
 
-        .social-icon {
-            width: 38px;
-            height: 38px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            color: var(--text-secondary);
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
+    .preview-label {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.15rem;
+      font-weight: 400;
+      font-style: italic;
+      color: var(--text-soft);
+      text-align: center;
+      margin-bottom: 20px;
+    }
 
-        .social-icon:hover {
-            color: var(--accent);
-            border-color: rgba(200, 168, 126, 0.3);
-            background: var(--accent-glow);
-            transform: translateY(-2px);
-        }
+    .preview-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+    }
 
-        .social-icon svg {
-            width: 16px;
-            height: 16px;
-            fill: currentColor;
-        }
+    .preview-grid img {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      border-radius: 4px;
+      transition: opacity 0.2s ease;
+    }
 
-        /* CTA Button */
-        .cta-link {
-            display: block;
-            width: 100%;
-            padding: 18px 24px;
-            text-align: center;
-            text-decoration: none;
-            font-family: 'Outfit', sans-serif;
-            font-weight: 400;
-            font-size: 0.95rem;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            color: var(--text-primary);
-            background: var(--link-bg);
-            border: 1px solid var(--link-border);
-            border-radius: 60px;
-            transition: all 0.35s ease;
-            position: relative;
-            overflow: hidden;
-        }
+    .preview-grid img:hover {
+      opacity: 0.85;
+    }
 
-        .cta-link::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(135deg, transparent, var(--accent-glow), transparent);
-            opacity: 0;
-            transition: opacity 0.35s ease;
-        }
+    /* ── What's Inside ── */
+    .inside-section {
+      margin-top: 48px;
+      padding: 28px 24px;
+      background: var(--surface);
+      border-radius: 8px;
+    }
 
-        .cta-link:hover {
-            background: var(--link-hover-bg);
-            border-color: var(--link-hover-border);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 30px rgba(200, 168, 126, 0.1);
-        }
+    .inside-heading {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin-bottom: 14px;
+    }
 
-        .cta-link:hover::before {
-            opacity: 1;
-        }
+    .inside-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
 
-        .cta-link span {
-            position: relative;
-            z-index: 1;
-        }
+    .inside-list li {
+      font-size: 0.85rem;
+      font-weight: 300;
+      color: var(--text-soft);
+      padding-left: 16px;
+      position: relative;
+    }
 
-        /* Age Gate */
-        .age-note {
-            text-align: center;
-            margin-top: 32px;
-            font-size: 0.75rem;
-            color: var(--text-secondary);
-            letter-spacing: 0.03em;
-        }
+    .inside-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 5px;
+      height: 5px;
+      background: var(--accent);
+      border-radius: 50%;
+    }
 
-        /* Footer */
-        .footer {
-            text-align: center;
-            margin-top: 48px;
-            padding-top: 24px;
-            border-top: 1px solid var(--card-border);
-        }
+    .inside-price {
+      font-size: 0.82rem;
+      color: var(--text);
+      margin-top: 16px;
+      font-weight: 400;
+    }
 
-        .footer-text {
-            font-size: 0.7rem;
-            color: rgba(240, 236, 230, 0.2);
-            letter-spacing: 0.05em;
-        }
+    /* ── Bottom CTA ── */
+    .cta-bottom {
+      margin-top: 40px;
+    }
 
-        /* Grain overlay */
-        body::after {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
-            pointer-events: none;
-            z-index: 9999;
-            opacity: 0.4;
-        }
+    .cta-secondary {
+      display: block;
+      width: 100%;
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 14px 24px;
+      background: transparent;
+      color: var(--accent);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 400;
+      letter-spacing: 0.02em;
+      text-align: center;
+      text-decoration: none;
+      border: 1px solid var(--accent);
+      border-radius: var(--radius);
+      transition: background 0.2s ease, color 0.2s ease;
+    }
 
-        @media (max-width: 480px) {
-            body {
-                padding: 40px 16px 32px;
-            }
-            .profile-name {
-                font-size: 1.75rem;
-            }
-            .socials {
-                gap: 16px;
-            }
-        }
-    </style>
+    .cta-secondary:hover {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    /* ── Footer ── */
+    .footer {
+      margin-top: 56px;
+      padding: 24px 0 40px;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      text-align: center;
+    }
+
+    .footer-note {
+      font-size: 0.72rem;
+      color: var(--text-soft);
+      opacity: 0.6;
+    }
+
+    .footer-social {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 14px;
+    }
+
+    .footer-social a {
+      color: var(--text-soft);
+      opacity: 0.4;
+      text-decoration: none;
+      font-size: 0.72rem;
+      font-weight: 300;
+      letter-spacing: 0.03em;
+      transition: opacity 0.2s;
+    }
+
+    .footer-social a:hover {
+      opacity: 0.8;
+    }
+
+    /* ── Mobile fine-tuning ── */
+    @media (max-width: 380px) {
+      .hero { padding-top: 32px; }
+      .hero-name { font-size: 1.75rem; }
+      .cta-primary { padding: 14px 20px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { transition: none !important; }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="profile">
-            <div class="profile-image-wrapper">
-                <img src="apple-touch-icon.png" alt="Yuna Mori" class="profile-image">
-            </div>
-            <h1 class="profile-name">Yuna Mori</h1>
-            <p class="profile-bio">Osaka → Silver Lake. Pilates, slow mornings. 18+ archive ↓</p>
-        </div>
+  <div class="page">
 
-        <div class="socials">
-            <!-- Instagram -->
-            <a href="https://instagram.com/yunamorifit" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram">
-                <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-            </a>
-            <!-- TikTok -->
-            <a href="https://tiktok.com/@yunamorifit" target="_blank" rel="noopener" class="social-icon" aria-label="TikTok">
-                <svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 0010.86 4.48v-7.15a8.16 8.16 0 005.58 2.2v-3.46a4.85 4.85 0 01-1-.1z"/></svg>
-            </a>
-            <!-- X -->
-            <a href="https://twitter.com/yunamorifit" target="_blank" rel="noopener" class="social-icon" aria-label="X">
-                <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-            </a>
-            <!-- YouTube -->
-            <a href="https://youtube.com/@yunamorifit" target="_blank" rel="noopener" class="social-icon" aria-label="YouTube">
-                <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-            </a>
-            <!-- Reddit -->
-            <a href="https://www.reddit.com/user/yunamorifit" target="_blank" rel="noopener" class="social-icon" aria-label="Reddit">
-                <svg viewBox="0 0 24 24"><path d="M12 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 01-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 01.042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 014.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 01.14-.197.35.35 0 01.238-.042l2.906.617a1.214 1.214 0 011.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 00-.231.094.33.33 0 000 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 000-.462.342.342 0 00-.462 0c-.545.533-1.684.73-2.512.73-.828 0-1.953-.197-2.498-.73a.327.327 0 00-.219-.095z"/></svg>
-            </a>
-            <!-- Telegram -->
-            <a href="https://t.me/yunamorifit" target="_blank" rel="noopener" class="social-icon" aria-label="Telegram">
-                <svg viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
-            </a>
-        </div>
+    <!-- Hero -->
+    <section class="hero">
+      <!-- REPLACE: swap hero.jpg with a strong 3:4 Yuna image (bathroom, kitchen, or couch look) -->
+      <img class="hero-img" src="hero.jpg" alt="Yuna Mori">
+      <h1 class="hero-name">Yuna Mori</h1>
+      <p class="hero-tagline">Slow mornings in Silver Lake. The archive that doesn't belong on Instagram.</p>
+    </section>
 
-        <a href="https://www.fanvue.com/yunamorifit" target="_blank" rel="noopener" class="cta-link">
-            <span>Full Archive</span>
-        </a>
+    <!-- Primary CTA -->
+    <a class="cta-primary" href="https://www.fanvue.com/yunamorifit">Follow Free on Fanvue</a>
+    <p class="cta-sub">Free previews are open. Members get the exclusive archive.</p>
 
-        <p class="age-note">18+ content available on Fanvue</p>
+    <!-- Preview Grid -->
+    <section class="preview-section">
+      <p class="preview-label">a taste before the blur wall</p>
+      <div class="preview-grid">
+        <!-- REPLACE: swap preview-1 through preview-4 with 4 strong T1/tease-adjacent images (3:4 ratio) -->
+        <img src="preview-1.jpg" alt="Preview">
+        <img src="preview-2.jpg" alt="Preview">
+        <img src="preview-3.jpg" alt="Preview">
+        <img src="preview-4.jpg" alt="Preview">
+      </div>
+    </section>
 
-        <div class="footer">
-            <p class="footer-text">© 2026 Yuna Mori</p>
-        </div>
+    <!-- What's Inside -->
+    <section class="inside-section">
+      <h2 class="inside-heading">What's inside</h2>
+      <ul class="inside-list">
+        <li>Free follower posts — lifestyle, pilates, slow mornings</li>
+        <li>Members-only exclusive sets you won't see anywhere else</li>
+        <li>New drops every week</li>
+        <li>DMs are open</li>
+      </ul>
+      <p class="inside-price">$3.99/month · cancel anytime</p>
+    </section>
+
+    <!-- Bottom CTA -->
+    <div class="cta-bottom">
+      <a class="cta-secondary" href="https://www.fanvue.com/yunamorifit">See the full archive →</a>
     </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-social">
+        <a href="https://instagram.com/yunamorifit">IG</a>
+        <a href="https://twitter.com/yunamorifit">X</a>
+      </div>
+      <p class="footer-note">18+ · AI generated or enhanced · © 2026 Yuna Mori</p>
+    </footer>
+
+  </div>
 </body>
 </html>
