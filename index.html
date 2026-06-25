@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yuna Mori</title>
-  <meta name="description" content="Yuna Mori — Osaka → Silver Lake. Pilates, slow mornings, 18+ archive.">
+  <meta name="description" content="Yuna Mori — Osaka to Silver Lake. Pilates, slow mornings, 18+ archive.">
   <meta property="og:title" content="Yuna Mori">
   <meta property="og:description" content="Slow mornings in Silver Lake. The archive you won't find on Instagram.">
   <meta property="og:type" content="website">
@@ -43,7 +43,7 @@
       padding: 0 20px;
     }
 
-    /* ── Hero ── */
+    /* Hero */
     .hero {
       display: flex;
       flex-direction: column;
@@ -51,12 +51,13 @@
       padding-top: 48px;
     }
 
-    .hero-img {
+    .hero-video {
       width: 100%;
       max-width: 400px;
-      aspect-ratio: 3 / 4;
+      aspect-ratio: 9 / 16;
       object-fit: cover;
       border-radius: 8px;
+      background: #111;
     }
 
     .hero-name {
@@ -75,9 +76,10 @@
       margin-top: 8px;
       text-align: center;
       letter-spacing: 0.01em;
+      max-width: 320px;
     }
 
-    /* ── CTA ── */
+    /* CTA */
     .cta-primary {
       display: block;
       width: 100%;
@@ -109,7 +111,7 @@
       font-weight: 300;
     }
 
-    /* ── Preview Grid ── */
+    /* Preview Grid */
     .preview-section {
       margin-top: 48px;
     }
@@ -132,7 +134,7 @@
 
     .preview-grid img {
       width: 100%;
-      aspect-ratio: 3 / 4;
+      aspect-ratio: 9 / 16;
       object-fit: cover;
       border-radius: 4px;
       transition: opacity 0.2s ease;
@@ -142,7 +144,7 @@
       opacity: 0.85;
     }
 
-    /* ── What's Inside ── */
+    /* What's Inside */
     .inside-section {
       margin-top: 48px;
       padding: 28px 24px;
@@ -190,7 +192,7 @@
       font-weight: 400;
     }
 
-    /* ── Bottom CTA ── */
+    /* Bottom CTA */
     .cta-bottom {
       margin-top: 40px;
     }
@@ -219,7 +221,7 @@
       color: #fff;
     }
 
-    /* ── Footer ── */
+    /* Footer */
     .footer {
       margin-top: 56px;
       padding: 24px 0 40px;
@@ -254,7 +256,6 @@
       opacity: 0.8;
     }
 
-    /* ── Mobile fine-tuning ── */
     @media (max-width: 380px) {
       .hero { padding-top: 32px; }
       .hero-name { font-size: 1.75rem; }
@@ -263,37 +264,34 @@
 
     @media (prefers-reduced-motion: reduce) {
       * { transition: none !important; }
+      .hero-video { animation: none; }
     }
   </style>
 </head>
 <body>
   <div class="page">
 
-    <!-- Hero -->
     <section class="hero">
-      <!-- REPLACE: swap hero.jpg with a strong 3:4 Yuna image (bathroom, kitchen, or couch look) -->
-      <img class="hero-img" src="hero.jpg" alt="Yuna Mori">
+      <video class="hero-video" autoplay muted loop playsinline poster="hero-poster.jpg">
+        <source src="hero.mp4" type="video/mp4">
+      </video>
       <h1 class="hero-name">Yuna Mori</h1>
       <p class="hero-tagline">Slow mornings in Silver Lake. The archive that doesn't belong on Instagram.</p>
     </section>
 
-    <!-- Primary CTA -->
     <a class="cta-primary" href="https://www.fanvue.com/yunamorifit">Follow Free on Fanvue</a>
     <p class="cta-sub">Free previews are open. Members get the exclusive archive.</p>
 
-    <!-- Preview Grid -->
     <section class="preview-section">
       <p class="preview-label">a taste before the blur wall</p>
       <div class="preview-grid">
-        <!-- REPLACE: swap preview-1 through preview-4 with 4 strong T1/tease-adjacent images (3:4 ratio) -->
-        <img src="preview-1.jpg" alt="Preview">
-        <img src="preview-2.jpg" alt="Preview">
-        <img src="preview-3.jpg" alt="Preview">
-        <img src="preview-4.jpg" alt="Preview">
+        <img src="preview-1.jpg" alt="Preview" loading="lazy">
+        <img src="preview-2.jpg" alt="Preview" loading="lazy">
+        <img src="preview-3.jpg" alt="Preview" loading="lazy">
+        <img src="preview-4.jpg" alt="Preview" loading="lazy">
       </div>
     </section>
 
-    <!-- What's Inside -->
     <section class="inside-section">
       <h2 class="inside-heading">What's inside</h2>
       <ul class="inside-list">
@@ -305,12 +303,10 @@
       <p class="inside-price">$3.99/month · cancel anytime</p>
     </section>
 
-    <!-- Bottom CTA -->
     <div class="cta-bottom">
       <a class="cta-secondary" href="https://www.fanvue.com/yunamorifit">See the full archive →</a>
     </div>
 
-    <!-- Footer -->
     <footer class="footer">
       <div class="footer-social">
         <a href="https://instagram.com/yunamorifit">IG</a>
