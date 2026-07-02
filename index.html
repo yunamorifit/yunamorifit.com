@@ -328,19 +328,19 @@
   </div>
   <script>
     document.querySelector('.cta-primary').addEventListener('click', function() {
-      gtag('event', 'click_cta_top', { event_category: 'conversion', event_label: 'follow_free_fanvue' });
+      gtag('event', 'click_cta_top', { event_category: 'conversion', event_label: 'follow_free_fanvue', transport_type: 'beacon' });
     });
     document.querySelector('.cta-secondary').addEventListener('click', function() {
-      gtag('event', 'click_cta_bottom', { event_category: 'conversion', event_label: 'enter_full_archive' });
+      gtag('event', 'click_cta_bottom', { event_category: 'conversion', event_label: 'enter_full_archive', transport_type: 'beacon' });
     });
     document.querySelectorAll('.preview-grid a').forEach(function(el, i) {
       el.addEventListener('click', function() {
-        gtag('event', 'click_preview_image', { event_category: 'conversion', event_label: 'preview_' + (i + 1) });
+        gtag('event', 'click_preview_image', { event_category: 'conversion', event_label: 'preview_' + (i + 1), transport_type: 'beacon' });
       });
     });
     document.querySelectorAll('.footer-social a').forEach(function(el) {
       el.addEventListener('click', function() {
-        gtag('event', 'click_social', { event_category: 'navigation', event_label: el.textContent.trim().toLowerCase() });
+        gtag('event', 'click_social', { event_category: 'navigation', event_label: el.textContent.trim().toLowerCase(), transport_type: 'beacon' });
       });
     });
   </script>
