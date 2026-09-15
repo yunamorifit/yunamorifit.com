@@ -60,9 +60,9 @@
       padding-top: 48px;
     }
 
-    .hero-video {
+    .hero-photo {
       width: 100%;
-      aspect-ratio: 9 / 16;
+      aspect-ratio: 4 / 5;
       object-fit: cover;
       border-radius: 8px;
       background: #111;
@@ -175,7 +175,6 @@
 
     @media (prefers-reduced-motion: reduce) {
       * { transition: none !important; }
-      .hero-video { animation: none; }
     }
   </style>
 </head>
@@ -183,9 +182,7 @@
   <div class="page">
 
     <section class="hero">
-      <video class="hero-video" autoplay muted loop playsinline poster="hero-poster.jpg">
-        <source src="hero.mp4" type="video/mp4">
-      </video>
+      <img class="hero-photo" src="hero-sfw.jpg" alt="Yuna Mori" onerror="this.style.display='none'">
       <h1 class="hero-name">Yuna Mori</h1>
       <p class="hero-tagline">Slow mornings in Silver Lake. Pilates, and the hours in between.</p>
     </section>
